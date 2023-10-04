@@ -32,7 +32,7 @@ const Home = () => {
                 <img src={product.image} alt={product.name} />
                 <div className="details">
                   <span>{product.desc}</span>
-                  <span>{product.price}</span>
+                  <span>${product.price}</span>
                 </div>
                 <button onClick={() => addToCartHandler(product)}>
                   Add to Cart

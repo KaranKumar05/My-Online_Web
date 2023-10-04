@@ -3,7 +3,8 @@
     margin: 0;
     box-sizing: border-box;
 }
-.searchBar{
+
+.searchBar {
     border-radius: 10px;
     padding: 0 10px 0 0;
     border: 1px solid white;
@@ -14,17 +15,26 @@
     background-color: rgb(210, 210, 3);
     color: black;
 }
-div input{
+
+div input {
     padding: 10px;
     border-radius: 10px 0 0 10px;
     border: none;
     width: 93%;
 }
+
 .searchBar label {
     cursor: pointer;
     padding: 8px;
 
 }
+
 .searchBar label:hover {
     cursor: pointer;
+}
+
+@media (max-width:775px) {
+    .searchBar {
+        width: 80%;
+    }
 }

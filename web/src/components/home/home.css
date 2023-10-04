@@ -26,8 +26,10 @@
 
 .home-container .products {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 3em;
     flex-wrap: wrap;
+
 }
 
 .home-container .product {
@@ -45,6 +47,7 @@
 .home-container .product img {
     width: 250px;
     height: 300px;
+    border-radius: 10px;
 }
 
 .home-container .product h2 {
@@ -80,4 +83,23 @@
     width: 90%;
     border-radius: 5px;
     cursor: pointer;
+}
+
+@media (max-width:775px) {
+    .home-container {
+        margin-top: 10em;
+    }
+}
+
+@media (max-width:524px) {
+    .home-container h1 {
+        text-align: center;
+    }
+}
+
+@media (max-width:398px) {
+    .home-container .product {
+        width: 320px;
+    }
+
 }

@@ -6,6 +6,8 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/navbar/navbar';
 import Home from './components/home/home';
 import Cart from './components/cart/cart';
+import Footer from './components/footer/footer';
+
 
 function App() {
   return (
@@ -16,11 +18,15 @@ function App() {
         </ul>
       </nav>
 
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='cart' element={<Cart />} />
-          <Route path='*' element={<Navigate to='/' />} />
-        </Routes>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='cart' element={<Cart />} />
+        <Route path='*' element={<Navigate to='/' />} />
+      </Routes>
+
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

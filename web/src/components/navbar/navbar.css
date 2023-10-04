@@ -10,11 +10,11 @@
     display: flex;
     justify-content: space-between;
     padding: 1em 4em;
-    /* background: linear-gradient(to bottom, black, black, transparent); */
     background-color: rgb(22, 22, 22);
     align-items: center;
     position: fixed;
     width: 100%;
+    z-index: 100;
     margin-top: -3em;
 
 }
@@ -61,4 +61,38 @@
 
 .icons .house-icon {
     font-size: 35px;
+}
+
+@media (max-width:897px) {
+    .navbar {
+        padding: 1em 2em;
+    }
+
+    .navbar h1 {
+        font-size: 1.7em;
+    }
+}
+
+@media (max-width:775px) {
+    .navbar {
+        padding: 1em 0 0 0;
+        flex-direction: column;
+        gap: 1em;
+        margin-top: -10em;
+    }
+
+    .icons {
+        width: 100%;
+        padding: 10px 0;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        border-top: 2px solid white;
+        background-color: rgb(43, 43, 43);
+    }
+}
+
+@media (max-width:524px) {
+    .icons {
+        justify-content: space-around;
+    }
 }

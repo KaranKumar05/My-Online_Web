@@ -78,13 +78,13 @@ const Cart = () => {
                     <button
                       onClick={() => decreaseCartQuantityHandler(cartItem)}
                     >
-                      -
+                      <Icon.DashLg />
                     </button>
                     <div className="count">{cartItem.cartQuantity}</div>
                     <button
                       onClick={() => increaseCartQuantityHandler(cartItem)}
                     >
-                      +
+                      <Icon.PlusLg />
                     </button>
                   </div>
                   <div className="cart-product-total-price">

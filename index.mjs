@@ -8,7 +8,7 @@ import Products from './products.mjs'
 const PORT = process.env.PORT;
 const app = express();
 
-app.use(express.json());
+app.use(express.json()); //Body Parser
 app.use(cors());
 
 app.get('/', (req, res, next) => {
