@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 import "./home.css";
 import { addToCart } from "../../features/cartSlice";
 
-import Slider from "../slider/slider";
 
 const Home = () => {
   const { data, error, isLoading } = useGetAllProductsQuery();

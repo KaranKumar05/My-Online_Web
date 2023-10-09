@@ -7,6 +7,7 @@ import Navbar from './components/navbar/navbar';
 import Home from './components/home/home';
 import Cart from './components/cart/cart';
 import Footer from './components/footer/footer';
+import CheckoutForm from './components/checkout/checkout';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='cart' element={<Cart />} />
+        <Route path='checkout' element={<CheckoutForm />} />
         <Route path='*' element={<Navigate to='/' />} />
       </Routes>
 

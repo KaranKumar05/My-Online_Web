@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 import * as Icon from "react-bootstrap-icons";
 
 import "./cart.css";
@@ -16,9 +17,9 @@ const Cart = () => {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(getTotals());
-    },[cart, dispatch])
+  useEffect(() => {
+    dispatch(getTotals());
+  }, [cart, dispatch]);
 
   const removeFromCardHandler = (cartItem) => {
     dispatch(removeFromCart(cartItem));
@@ -34,6 +35,11 @@ const Cart = () => {
 
   const clearCartHandler = () => {
     dispatch(clearCart());
+  };
+
+  const navigate = useNavigate();
+  const checkoutHandler = () => {
+    navigate("/checkout");
   };
 
   return (
@@ -94,10 +100,7 @@ const Cart = () => {
               ))}
           </div>
           <div className="cart-summary">
-            <button
-              className="clear-btn"
-              onClick={() => clearCartHandler()}
-            >
+            <button className="clear-btn" onClick={() => clearCartHandler()}>
               Clear Cart
             </button>
             <div className="cart-checkout">
@@ -106,7 +109,7 @@ const Cart = () => {
                 <span className="amount">${cart.cartTotalAmount}</span>
               </div>
               <p>Taxes and shipping calculated at checkout</p>
-              <button>Check out</button>
+              <button onClick={() => checkoutHandler()}>Check out</button>
               <div className="continue-shopping">
                 <Link to="/">
                   <span>
